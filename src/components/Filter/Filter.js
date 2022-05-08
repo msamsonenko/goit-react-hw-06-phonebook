@@ -7,9 +7,11 @@ import PropTypes from 'prop-types';
 const Filter = () => {
   const dispatch = useDispatch();
   const filterValue = useSelector(state => state.contacts.filter);
+
   const changeFilter = e => {
     dispatch(filter(e.currentTarget.value));
   };
+
   return (
     <FilterContainer>
       <FilterLabel>Find contacts by name</FilterLabel>
